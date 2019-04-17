@@ -1,9 +1,48 @@
+var bonus;
+var topAce4;
+var topAce3;
+var topAce2;
+var topAce1;
+var a;
+var r;
+var active;
+var cardFolder;
+var ind;
+var colInd;
+var j;
+var ace4Suit;
+var ace3Suit;
+var ace2Suit;
+var ace1Suit;
+var attached;
+var idNum;
+var i;
+import { moveArray } from ".\\movefunctions.js";
+import { originalCardTopPos } from ".\\movefunctions.js";
+import { originalCardLeftPos } from ".\\movefunctions.js";
+import { leftPosArray } from ".\\freecell.js";
+import { columnArray } from ".\\freecell.js";
+import { ace4 } from ".\\freecell.js";
+import { ace3 } from ".\\freecell.js";
+import { ace2 } from ".\\freecell.js";
+import { ace1 } from ".\\freecell.js";
+import { deck } from ".\\freecell.js";
+import { staticImageArray } from ".\\freecell.js";
+import { overlap } from ".\\freecell.js";
+import { numMoves } from ".\\freecell.js";
+import { freecell } from ".\\freecell.js";
+import { klondike } from ".\\freecell.js";
+import { checkForHighScore } from ".\\solitaire.js";
+import { addToScore } from ".\\solitaire.js";
+import { setPrefs } from ".\\freecell.js";
+import { checkForFastestTime } from ".\\freecell.js";
+export var r;
+
 // <!-- Filename: sub.js -->
 // <!-- Created December 2, 2003 by Leah Culver -->
 // <!-- Last modified 12/5/2003 by Leah Culver -->
 
-function returnToOriginalPile()
-{
+export function returnToOriginalPile() {
 	for(i = 0; i < moveArray.length; i ++)
 	{
 		idNum = moveArray[i]
@@ -13,8 +52,7 @@ function returnToOriginalPile()
 	}
 }
 
-function setAcePileSuit(acePile, suitName)
-{
+export function setAcePileSuit(acePile, suitName) {
 	if(acePile == ace1)
 		{ace1Suit = suitName}
 	else if(acePile == ace2)
@@ -25,8 +63,7 @@ function setAcePileSuit(acePile, suitName)
 		{ace4Suit = suitName}
 }
 
-function getAcePileSuit(acePile)
-{
+export function getAcePileSuit(acePile) {
 	if(acePile == ace1)
 		{return ace1Suit}
 	else if(acePile == ace2)
@@ -37,8 +74,7 @@ function getAcePileSuit(acePile)
 		{return ace4Suit}
 }
 
-function findColumn(cardNum)
-{
+export function findColumn(cardNum) {
 	for(i =0; i < columnArray.length; i++)
 	{
 		for(j = 0; j < columnArray[i].length; j++)
@@ -47,8 +83,7 @@ function findColumn(cardNum)
 	}
 }
 
-function findLeftPosition(column)
-{
+export function findLeftPosition(column) {
 	for(colInd=0; colInd < columnArray.length; colInd++)
 	{
 		if(columnArray[colInd] == column)
@@ -56,15 +91,13 @@ function findLeftPosition(column)
 	}
 }
 
-function findIndex(cardNumber, columnName)
-{
+export function findIndex(cardNumber, columnName) {
 	for(ind = 0; ind < columnName.length; ind++)
 		{if(columnName[ind] == cardNumber)
 		{return ind}}
 }
 
-function changeDeck()
-{
+export function changeDeck() {
 	setPrefs()
 	cardFolder = document.getElementById('chooseDeck').value + "/"
 	for(i=0; i < deck.length; i++)
@@ -87,8 +120,7 @@ function changeDeck()
 	}
 }
 
-function checkEndGame()
-{
+export function checkEndGame() {
 	topAce1 = ace1[ace1.length - 1] % 13
 	topAce2 = ace2[ace2.length - 1] % 13
 	topAce3 = ace3[ace3.length - 1] % 13

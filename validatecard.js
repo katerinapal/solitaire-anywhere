@@ -1,10 +1,33 @@
+var setSuit;
+var suit;
+var moveSuitColor;
+var prevSuitColor;
+var moveNum;
+var prevNum;
+var prevId;
+import { newColumn } from ".\\movefunctions.js";
+import { cell4 } from ".\\freecell.js";
+import { cell3 } from ".\\freecell.js";
+import { cell2 } from ".\\freecell.js";
+import { cell1 } from ".\\freecell.js";
+import { ace4 } from ".\\freecell.js";
+import { ace3 } from ".\\freecell.js";
+import { ace2 } from ".\\freecell.js";
+import { ace1 } from ".\\freecell.js";
+import { col0 } from ".\\freecell.js";
+import { freecell } from ".\\freecell.js";
+import { klondike } from ".\\freecell.js";
+import { findIndex } from ".\\sub.js";
+import { getAcePileSuit } from ".\\sub.js";
+import { setAcePileSuit } from ".\\sub.js";
+export var moveNum;
+
 // <!-- Filename: validatecard.js -->
 // <!-- Created December 2, 2003 by Leah Culver -->
 // <!-- Last modified 12/3/2003 by Leah Culver -->
 
 //Is this a valid move?
-function validateCard(moveId, oldColumn, newColumn)
-{
+export function validateCard(moveId, oldColumn, newColumn) {
 	if(oldColumn != newColumn)
 	{
 		prevId = newColumn[newColumn.length - 1] // top card on new column

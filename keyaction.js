@@ -1,10 +1,92 @@
+export var card;
+
+export function keyaction_modificationFunc_11() {
+    card = document.getElementById(ma[i]);
+}
+
+var lnum;
+var u;
+var num;
+export var ani;
+
+export function keyaction_modificationFunc_8() {
+    ani = true;
+}
+
+export function keyaction_modificationFunc_7() {
+    ani = false;
+}
+
+var topCardArray;
+var index2;
+var index1;
+var s;
+var counter;
+var searchCardValue2;
+var searchCardValue1;
+var c;
+var acePileArray;
+var okToMove;
+var theTopCard;
+var keepCheckingForStuffToMoveToTheAcePiles;
+var freeSpots;
+var end;
+var aceStart;
+export var checkMe;
+
+export function keyaction_modificationFunc_10() {
+    checkMe = document.getElementById(col0[topIndex]);
+}
+
+export var active;
+
+export function keyaction_modificationFunc_12() {
+    active = document.getElementById(deck[i]);
+}
+
+export function keyaction_modificationFunc_9() {
+    active = document.getElementById(deck[q]);
+}
+
+var col;
+var b;
+var k;
+var topCardIndex;
+var q;
+import { animTime } from ".\\snaptoplace.js";
+import { leftPosArray } from ".\\freecell.js";
+import { columnArray } from ".\\freecell.js";
+import { ace4 } from ".\\freecell.js";
+import { ace3 } from ".\\freecell.js";
+import { ace2 } from ".\\freecell.js";
+import { ace1 } from ".\\freecell.js";
+import { deck } from ".\\freecell.js";
+import { mouseIsDown } from ".\\freecell.js";
+import { paused } from ".\\freecell.js";
+import { freecell } from ".\\freecell.js";
+import { klondike } from ".\\freecell.js";
+import { validateCard } from ".\\validatecard.js";
+import { findIndex } from ".\\sub.js";
+import { checkForHighScore } from ".\\solitaire.js";
+import { undo } from ".\\snaptoplace.js";
+import { snapToPlace } from ".\\snaptoplace.js";
+import { updateRecord } from ".\\nameprompt.js";
+import { findPossibleMoves } from ".\\movefunctions.js";
+import { unPause } from ".\\freecell.js";
+import { pause } from ".\\freecell.js";
+import { assignMovableClass } from ".\\freecell.js";
+export var num;
+var s;
+export var col;
+var k;
+var q;
+
 // <!-- Filename: keyaction.js -->
 // <!-- Created December 2, 2003 by Leah Culver -->
 // <!-- Last modified 12/15/2003 by Leah Culver -->
 
 //handles the onkeyup
-function keyUpAction()
-{
+export function keyUpAction() {
 	//alert(event.keyCode)
 
 	//shift key up - unhighlight
@@ -47,8 +129,7 @@ function keyUpAction()
 }
 
 //key down / key pressed
-function keyDownAction()
-{
+export function keyDownAction() {
 	//the shift key
 	if(klondike && event.shiftKey && animTime == null)
 	{
@@ -95,8 +176,7 @@ function keyDownAction()
 
 //this function checks for everything that can
 //be moved to the ace piles then moves it there
-function moveToAcePiles(moveAll)
-{
+export function moveToAcePiles(moveAll) {
 	checkMe = new Array()
 	if(klondike)
 	{

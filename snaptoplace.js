@@ -1,9 +1,138 @@
+var card;
+var ma;
+var cardTop;
+var cardLeft;
+var j;
+var loops;
+var e;
+var aArray;
+var endTop;
+var endLeft;
+var startTop;
+var pxIndex2;
+var topC;
+var startLeft;
+var left;
+var firstCard;
+var acceptDblClick;
+var endGame;
+var animTime;
+var numSteps;
+var aniArray;
+var flipBack;
+var k;
+var numLeft;
+var pxIndex;
+var pxNumLeft;
+var objCardBelow;
+var cardBelow;
+var new0Index;
+var numToCheck;
+export var numToFlip;
+
+export function snaptoplace_modificationFunc_16() {
+    numToFlip = f.value;
+}
+
+export function snaptoplace_modificationFunc_15() {
+    numToFlip = flipIndex.value;
+}
+
+export var flipIndex;
+
+export function snaptoplace_modificationFunc_14() {
+    flipIndex = document.getElementById("numFlip");
+}
+
+var objUnder;
+var mArray;
+var leftP;
+var columnMoveTo;
+var active;
+var q;
+var newMove;
+var n;
+var checkMe;
+var topIndex;
+var lastExposCardInd;
+var spl;
+var indexOf;
+var cellMove;
+var newColumnTop;
+var attached;
+var idNum;
+var i;
+var newExposedExists;
+export var moveNum;
+
+export function snaptoplace_modificationFunc_17() {
+    moveNum = moveId % 13;
+}
+
+var newColumnLength;
+import { pileUpLeft } from ".\\solitaire.js";
+import { pileDownLeft } from ".\\solitaire.js";
+import { flipSpace } from ".\\solitaire.js";
+import { newColumn } from ".\\movefunctions.js";
+import { moveArray } from ".\\movefunctions.js";
+import { cell4 } from ".\\freecell.js";
+import { cell3 } from ".\\freecell.js";
+import { cell2 } from ".\\freecell.js";
+import { cell1 } from ".\\freecell.js";
+import { ace4 } from ".\\freecell.js";
+import { ace3 } from ".\\freecell.js";
+import { ace2 } from ".\\freecell.js";
+import { ace1 } from ".\\freecell.js";
+import { col0 } from ".\\freecell.js";
+import { deck } from ".\\freecell.js";
+import { tableTop } from ".\\freecell.js";
+import { cellTop } from ".\\freecell.js";
+import { overlap } from ".\\freecell.js";
+import { cardFolder } from ".\\freecell.js";
+import { undoArray } from ".\\freecell.js";
+import { freecell_modificationFunc_41 } from ".\\freecell.js";
+import { freecell_modificationFunc_40 } from ".\\freecell.js";
+import { numMovable } from ".\\freecell.js";
+import { freecell_modificationFunc_62 } from ".\\freecell.js";
+import { freecell_modificationFunc_39 } from ".\\freecell.js";
+import { freecell_modificationFunc_38 } from ".\\freecell.js";
+import { numMoves } from ".\\freecell.js";
+import { freecell_modificationFunc_37 } from ".\\freecell.js";
+import { freecell_modificationFunc_36 } from ".\\freecell.js";
+import { freecell_modificationFunc_35 } from ".\\freecell.js";
+import { zPos } from ".\\freecell.js";
+import { freecell } from ".\\freecell.js";
+import { klondike } from ".\\freecell.js";
+import { checkEndGame } from ".\\sub.js";
+import { findIndex } from ".\\sub.js";
+import { findLeftPosition } from ".\\sub.js";
+import { addToScore } from ".\\solitaire.js";
+import { assignMovableClass } from ".\\freecell.js";
+export var n;
+export var indexOf;
+export var attached;
+export var idNum;
+export var card;
+export var animTime;
+export var active;
+export var checkMe;
+var j;
+export var left;
+export var acceptDblClick;
+
 // <!-- Filename: snaptoplace.js -->
 // <!-- Created December 2, 2003 by Leah Culver -->
 // <!-- Last modified 12/15/2003 by Leah Culver -->
 
-function snapToPlace(moveArray, oldColumn, newColumn, newColumnLeft, undo, animateMe)//Automatically position the card
-{
+export function snapToPlace(
+    moveArray,
+    oldColumn,
+    newColumn,
+    newColumnLeft,
+    undo,
+    //Automatically position the card
+    animateMe
+) {
 	//alert("snap")
 	//alert(oldColumn)
 	newColumnLength = newColumn.length
@@ -39,7 +168,7 @@ function snapToPlace(moveArray, oldColumn, newColumn, newColumnLeft, undo, anima
 		else if(freecell && (newColumn == cell1 || newColumn == cell2 || newColumn == cell3 || newColumn == cell4))
 		{
 			newColumnTop = cellTop
-			numMovable --
+			freecell_modificationFunc_40();
 			cellMove = true
 		}
 		else
@@ -50,7 +179,7 @@ function snapToPlace(moveArray, oldColumn, newColumn, newColumnLeft, undo, anima
 		
 		//up the numMovable (will also cancel out cell to cell moves)
 		if(freecell && (oldColumn == cell1 || oldColumn == cell2 || oldColumn == cell3 || oldColumn == cell4))
-			numMovable++
+			freecell_modificationFunc_41();
 		
 		//alert(newColumn.toString() + " -- " + newColumn.length + " | " + oldColumn.toString() + " -- " + oldColumn.length)
 
@@ -170,7 +299,7 @@ function snapToPlace(moveArray, oldColumn, newColumn, newColumnLeft, undo, anima
 
 	if(!undo) //regular move
 	{
-		numMoves++
+		freecell_modificationFunc_38();
 		//alert(numMoves)
 
 		if(freecell && (newColumn == ace1 || newColumn == ace2 || newColumn == ace3 || newColumn == ace4))
@@ -193,7 +322,7 @@ function snapToPlace(moveArray, oldColumn, newColumn, newColumnLeft, undo, anima
 	}
 	else //this was an undo!
 	{
-		numMoves--
+		freecell_modificationFunc_39();
 		//alert(numMoves)
 		//clear undo array
 		undoArray[0] = null
@@ -201,9 +330,7 @@ function snapToPlace(moveArray, oldColumn, newColumn, newColumnLeft, undo, anima
 	}
 }
 
-
-function undo()
-{
+export function undo() {
 	if(undoArray[0])//array has been set
 	{
 		columnMoveTo = undoArray[1] //old column
@@ -216,7 +343,7 @@ function undo()
 		for(i=0; i < mArray.length; i++)
 		{
 			document.getElementById(mArray[i]).style.zIndex = zPos
-			zPos++
+			freecell_modificationFunc_35();
 		}
 
 		//if this card is from pile to different pile
@@ -276,7 +403,7 @@ function undo()
 				flipBack.className = 'flip'
 				//alert(mArray[k])
 				flipBack.style.zIndex = zPos
-				zPos++
+				freecell_modificationFunc_36();
 			}
 			document.getElementById('undoButton').className = "inactiveLink"
 		}
@@ -345,7 +472,7 @@ function animate()
 		{
 			card = document.getElementById(ma[i])
 			card.style.zIndex = zPos
-			zPos++
+			freecell_modificationFunc_37();
 			card.style.left = cardLeft
 			card.style.top = cardTop + (i*overlap)
 		}

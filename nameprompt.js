@@ -1,3 +1,36 @@
+var i;
+var cn;
+export var n;
+
+export function nameprompt_modificationFunc_13() {
+    n = flipMe.id;
+}
+
+export function nameprompt_modificationFunc_12() {
+    n = oldColumn[oldColumn.length - 1];
+}
+
+export var r;
+
+export function nameprompt_modificationFunc_14() {
+    r = document.getElementById("restack");
+}
+
+var stringValue;
+var playerName;
+var nameField;
+import { index } from ".\\freecell.js";
+import { secs } from ".\\freecell.js";
+import { mins } from ".\\freecell.js";
+import { score } from ".\\freecell.js";
+import { records } from ".\\freecell.js";
+import { players } from ".\\freecell.js";
+import { freecell } from ".\\freecell.js";
+import { klondike } from ".\\freecell.js";
+import { setCookie } from ".\\cookie.js";
+var i;
+export var cn;
+export var playerName;
 // <!-- Filename: cookie.js -->
 // <!-- Created December 3, 2003 by Leah Culver -->
 // <!-- Last modified 12/18/2003 by Leah Culver -->
@@ -32,8 +65,7 @@ function cancelRecord()
 		window.location.replace("freecell.html")
 }
 
-function updateRecord()
-{
+export function updateRecord() {
 	nameField = document.getElementById("inputName")
 	playerName = nameField.value
 	if(klondike)

@@ -1,4 +1,744 @@
 
+var v;
+var j;
+var index;
+var k;
+var q;
+var now;
+var pauseBar;
+export var prefString;
+
+export function freecell_modificationFunc_147() {
+    prefString += "&sound=" + document.getElementById("soundOption").checked;
+}
+
+export function freecell_modificationFunc_146() {
+    prefString += "&animate=" + document.getElementById("animOption").checked;
+}
+
+export function freecell_modificationFunc_145() {
+    prefString += "&flipShow=" + document.getElementById("showDealt").checked;
+}
+
+export function freecell_modificationFunc_144() {
+    prefString += "&flip=" + document.getElementById("numFlip").value;
+}
+
+export function freecell_modificationFunc_143() {
+    prefString = "face=" + document.getElementById("chooseDeck").value;
+}
+
+export var inputN;
+
+export function freecell_modificationFunc_142() {
+    inputN = document.getElementById("inputName");
+}
+
+export var winHeight;
+
+export function freecell_modificationFunc_141() {
+    winHeight = document.body.clientHeight;
+}
+
+export var winWidth;
+
+export function freecell_modificationFunc_140() {
+    winWidth = document.body.clientWidth;
+}
+
+export var pb;
+
+export function freecell_modificationFunc_139() {
+    pb = document.getElementById("highScoreDialogue");
+}
+
+export var dis;
+
+export function freecell_modificationFunc_138() {
+    dis = document.getElementById(v);
+}
+
+var v;
+export var playerName;
+
+export function freecell_modificationFunc_135() {
+    playerName = "";
+}
+
+export function freecell_modificationFunc_34() {
+    playerName = "Somebody";
+}
+
+export function freecell_modificationFunc_33() {
+    playerName = "No Name";
+}
+
+export function freecell_modificationFunc_32() {
+    playerName = "Dude";
+}
+
+export function freecell_modificationFunc_31() {
+    playerName = nameField.value;
+}
+
+export var cn;
+
+export function freecell_modificationFunc_134() {
+    cn = "";
+}
+
+export function freecell_modificationFunc_30() {
+    cn += players[i - 1] + "=" + records[i - 1] + "&";
+}
+
+export function freecell_modificationFunc_29() {
+    cn += players[i - 1] + "=" + records[i - 1];
+}
+
+export function freecell_modificationFunc_28() {
+    cn += playerName + "=" + stringValue + "&";
+}
+
+export function freecell_modificationFunc_27() {
+    cn += playerName + "=" + stringValue;
+}
+
+export function freecell_modificationFunc_26() {
+    cn += players[i] + "=" + records[i] + "&";
+}
+
+export function freecell_modificationFunc_25() {
+    cn += playerName + "=" + stringValue + "&";
+}
+
+var fsec;
+var fmin;
+var colon;
+var ft;
+var k;
+export var moved;
+
+export function freecell_modificationFunc_131() {
+    moved = true;
+}
+
+export function freecell_modificationFunc_130() {
+    moved = false;
+}
+
+var end;
+var begin;
+export var moveId;
+
+export function freecell_modificationFunc_129() {
+    moveId = moveArray[0];
+}
+
+export var acceptDblClick;
+
+export function freecell_modificationFunc_128() {
+    acceptDblClick = true;
+}
+
+export function freecell_modificationFunc_127() {
+    acceptDblClick = false;
+}
+
+export function freecell_modificationFunc_126() {
+    acceptDblClick = true;
+}
+
+export function freecell_modificationFunc_125() {
+    acceptDblClick = true;
+}
+
+export function freecell_modificationFunc_47() {
+    acceptDblClick = true;
+}
+
+export function freecell_modificationFunc_46() {
+    acceptDblClick = false;
+}
+
+var nextSuitColor;
+var checkSuitColor;
+var nextNum;
+var checkNum;
+var nextId;
+var checkId;
+var j;
+var continueCheck;
+export var col;
+
+export function freecell_modificationFunc_18() {
+    col = checkMe[b];
+}
+
+export function freecell_modificationFunc_17() {
+    col = columnArray[b];
+}
+
+export var leftOfCardLocation;
+
+export function freecell_modificationFunc_124() {
+    leftOfCardLocation = pileDownLeft;
+}
+
+export function freecell_modificationFunc_123() {
+    leftOfCardLocation = border + (numberOfCards - 1) * cardWidth + (numberOfCards - 1) * gutter;
+}
+
+export var topOfCardLocation;
+
+export function freecell_modificationFunc_122() {
+    topOfCardLocation = cellTop;
+}
+
+export function freecell_modificationFunc_121() {
+    topOfCardLocation = index * overlap + tableTop;
+}
+
+var q;
+export var num;
+
+export function freecell_modificationFunc_118() {
+    num = Math.ceil(rand);
+}
+
+export function freecell_modificationFunc_12() {
+    num = 0;
+}
+
+export function freecell_modificationFunc_11() {
+    num = 12;
+}
+
+export function freecell_modificationFunc_10() {
+    num = 11;
+}
+
+export function freecell_modificationFunc_9() {
+    num = 1;
+}
+
+export function freecell_modificationFunc_8() {
+    num = 10;
+}
+
+export function freecell_modificationFunc_7() {
+    num = value - 96;
+}
+
+export function freecell_modificationFunc_6() {
+    num = value - 48;
+}
+
+export var rand;
+
+export function freecell_modificationFunc_117() {
+    rand = Math.random() * 52;
+}
+
+export var used;
+
+export function freecell_modificationFunc_116() {
+    used = true;
+}
+
+export function freecell_modificationFunc_115() {
+    used = false;
+}
+
+var index;
+
+export function freecell_modificationFunc_114() {
+    index = i;
+}
+
+export function freecell_modificationFunc_113() {
+    index = -1;
+}
+
+export function freecell_modificationFunc_112() {
+    index--;
+}
+
+export var secs;
+export var mins;
+var eTime;
+var timeElapsed;
+var difference;
+var current;
+var startTime;
+var start;
+var timer;
+export var splPref4;
+
+export function freecell_modificationFunc_109() {
+    splPref4 = prefArray[3].split("=");
+}
+
+export var splPref3;
+
+export function freecell_modificationFunc_108() {
+    splPref3 = prefArray[2].split("=");
+}
+
+export var splPref2;
+
+export function freecell_modificationFunc_107() {
+    splPref2 = prefArray[1].split("=");
+}
+
+export var splPref;
+
+export function freecell_modificationFunc_106() {
+    splPref = prefArray[0].split("=");
+}
+
+export var deckStyle;
+
+export function freecell_modificationFunc_105() {
+    deckStyle = document.getElementById("chooseDeck");
+}
+
+export var prefArray;
+
+export function freecell_modificationFunc_104() {
+    prefArray = getCookieArray("kpref");
+}
+
+export var leftPosArray;
+
+export function freecell_modificationFunc_103() {
+    leftPosArray = new Array(
+        border,
+        col1Left,
+        col2Left,
+        col3Left,
+        col4Left,
+        col5Left,
+        col6Left,
+        col7Left,
+        col4Left,
+        col5Left,
+        col6Left,
+        col7Left
+    );
+}
+
+export var columnArray;
+
+export function freecell_modificationFunc_102() {
+    columnArray = new Array(col0, col1, col2, col3, col4, col5, col6, col7, ace1, ace2, ace3, ace4);
+}
+
+export var cell4;
+export var cell3;
+export var cell2;
+export var cell1;
+export var ace4Suit;
+
+export function freecell_modificationFunc_152() {
+    ace4Suit = suitName;
+}
+
+export function freecell_modificationFunc_101() {
+    ace4Suit = "";
+}
+
+export var ace4;
+
+export function freecell_modificationFunc_100() {
+    ace4 = new Array();
+}
+
+export var ace3Suit;
+
+export function freecell_modificationFunc_151() {
+    ace3Suit = suitName;
+}
+
+export function freecell_modificationFunc_99() {
+    ace3Suit = "";
+}
+
+export var ace3;
+
+export function freecell_modificationFunc_98() {
+    ace3 = new Array();
+}
+
+export var ace2Suit;
+
+export function freecell_modificationFunc_150() {
+    ace2Suit = suitName;
+}
+
+export function freecell_modificationFunc_97() {
+    ace2Suit = "";
+}
+
+export var ace2;
+
+export function freecell_modificationFunc_96() {
+    ace2 = new Array();
+}
+
+export var ace1Suit;
+
+export function freecell_modificationFunc_149() {
+    ace1Suit = suitName;
+}
+
+export function freecell_modificationFunc_95() {
+    ace1Suit = "";
+}
+
+export var ace1;
+
+export function freecell_modificationFunc_94() {
+    ace1 = new Array();
+}
+
+var col8;
+export var col7;
+
+export function freecell_modificationFunc_93() {
+    col7 = new Array();
+}
+
+export var col6;
+
+export function freecell_modificationFunc_92() {
+    col6 = new Array();
+}
+
+export var col5;
+
+export function freecell_modificationFunc_91() {
+    col5 = new Array();
+}
+
+export var col4;
+
+export function freecell_modificationFunc_90() {
+    col4 = new Array();
+}
+
+export var col3;
+
+export function freecell_modificationFunc_89() {
+    col3 = new Array();
+}
+
+export var col2;
+
+export function freecell_modificationFunc_88() {
+    col2 = new Array();
+}
+
+export var col1;
+
+export function freecell_modificationFunc_87() {
+    col1 = new Array();
+}
+
+export var col0;
+
+export function freecell_modificationFunc_86() {
+    col0 = new Array();
+}
+
+export var numCardsInDeck;
+
+export function freecell_modificationFunc_85() {
+    numCardsInDeck++;
+}
+
+export function freecell_modificationFunc_84() {
+    numCardsInDeck = 0;
+}
+
+export var deck;
+
+export function freecell_modificationFunc_83() {
+    deck = new Array();
+}
+
+export var leftEdge;
+
+export function freecell_modificationFunc_82() {
+    leftEdge = border + (i + 3) * cardWidth + (i + 3) * gutter;
+}
+
+export var staticImageArray;
+
+export function freecell_modificationFunc_81() {
+    staticImageArray = new Array();
+}
+
+var cell4Left;
+var cell3Left;
+var cell2Left;
+var cell1Left;
+var ace4Left;
+var ace3Left;
+var ace2Left;
+var ace1Left;
+var col8Left;
+export var col7Left;
+
+export function freecell_modificationFunc_80() {
+    col7Left = border + 6 * cardWidth + 6 * gutter;
+}
+
+export var col6Left;
+
+export function freecell_modificationFunc_79() {
+    col6Left = border + 5 * cardWidth + 5 * gutter;
+}
+
+export var col5Left;
+
+export function freecell_modificationFunc_78() {
+    col5Left = border + 4 * cardWidth + 4 * gutter;
+}
+
+export var col4Left;
+
+export function freecell_modificationFunc_77() {
+    col4Left = border + 3 * cardWidth + 3 * gutter;
+}
+
+export var col3Left;
+
+export function freecell_modificationFunc_76() {
+    col3Left = border + 2 * cardWidth + 2 * gutter;
+}
+
+export var col2Left;
+
+export function freecell_modificationFunc_75() {
+    col2Left = border + cardWidth + gutter;
+}
+
+export var col1Left;
+
+export function freecell_modificationFunc_74() {
+    col1Left = border;
+}
+
+export var tableTop;
+
+export function freecell_modificationFunc_73() {
+    tableTop = cellTop + 160;
+}
+
+export var cellTop;
+
+export function freecell_modificationFunc_72() {
+    cellTop = 40;
+}
+
+export var overlap;
+
+export function freecell_modificationFunc_71() {
+    overlap = 20;
+}
+
+export var gutter;
+
+export function freecell_modificationFunc_70() {
+    gutter = 15;
+}
+
+var cellGutter;
+export var border;
+
+export function freecell_modificationFunc_69() {
+    border = 190;
+}
+
+export var cardHeight;
+
+export function freecell_modificationFunc_68() {
+    cardHeight = 120;
+}
+
+export var cardWidth;
+
+export function freecell_modificationFunc_67() {
+    cardWidth = 80;
+}
+
+export var cardFolder;
+
+export function freecell_modificationFunc_148() {
+    cardFolder = document.getElementById("chooseDeck").value + "/";
+}
+
+export function freecell_modificationFunc_66() {
+    cardFolder = document.getElementById("chooseDeck").value + "/";
+}
+
+export var undoArray;
+
+export function freecell_modificationFunc_65() {
+    undoArray = new Array();
+}
+
+export var mouseIsDown;
+
+export function freecell_modificationFunc_64() {
+    mouseIsDown = false;
+}
+
+export function freecell_modificationFunc_63() {
+    mouseIsDown = false;
+}
+
+export function freecell_modificationFunc_24() {
+    mouseIsDown = true;
+}
+
+var numColumnsEmpty;
+export var numMovable;
+
+export function freecell_modificationFunc_41() {
+    numMovable++;
+}
+
+export function freecell_modificationFunc_40() {
+    numMovable--;
+}
+
+export var numMoves;
+
+export function freecell_modificationFunc_62() {
+    numMoves = 0;
+}
+
+export function freecell_modificationFunc_39() {
+    numMoves--;
+}
+
+export function freecell_modificationFunc_38() {
+    numMoves++;
+}
+
+export var score;
+
+export function freecell_modificationFunc_61() {
+    score = score + numAdd;
+}
+
+export function freecell_modificationFunc_60() {
+    score = 0;
+}
+
+export var zPos;
+
+export function freecell_modificationFunc_59() {
+    zPos++;
+}
+
+export function freecell_modificationFunc_58() {
+    zPos++;
+}
+
+export function freecell_modificationFunc_57() {
+    zPos = 60;
+}
+
+export function freecell_modificationFunc_37() {
+    zPos++;
+}
+
+export function freecell_modificationFunc_36() {
+    zPos++;
+}
+
+export function freecell_modificationFunc_35() {
+    zPos++;
+}
+
+export function freecell_modificationFunc_23() {
+    zPos++;
+}
+
+export var paused;
+export var dragapproved;
+
+export function freecell_modificationFunc_56() {
+    dragapproved = false;
+}
+
+export function freecell_modificationFunc_55() {
+    dragapproved = false;
+}
+
+export function freecell_modificationFunc_22() {
+    dragapproved = true;
+}
+
+export function freecell_modificationFunc_21() {
+    dragapproved = false;
+}
+
+export var s;
+
+export function freecell_modificationFunc_54() {
+    s = highScoresArray[i].split("=");
+}
+
+export var records;
+
+export function freecell_modificationFunc_53() {
+    records = new Array(numHighScores);
+}
+
+export var players;
+
+export function freecell_modificationFunc_52() {
+    players = new Array(numHighScores);
+}
+
+var timeArray;
+var numFastestTimes;
+export var freecell;
+
+export function freecell_modificationFunc_51() {
+    freecell = false;
+}
+
+export var klondike;
+
+export function freecell_modificationFunc_50() {
+    klondike = true;
+}
+
+import { left } from ".\\snaptoplace.js";
+import { moveArray } from ".\\movefunctions.js";
+import { xCardCenter } from ".\\movefunctions.js";
+import { newyPos } from ".\\movefunctions.js";
+import { newxPos } from ".\\movefunctions.js";
+import { column } from ".\\movefunctions.js";
+import { validateCard } from ".\\validatecard.js";
+import { changeDeck } from ".\\sub.js";
+import { findIndex } from ".\\sub.js";
+import { returnToOriginalPile } from ".\\sub.js";
+import { undo } from ".\\snaptoplace.js";
+import { snapToPlace } from ".\\snaptoplace.js";
+import { dblclickAction } from ".\\movefunctions.js";
+import { drag } from ".\\movefunctions.js";
+import { moveToAcePiles } from ".\\keyaction.js";
+import { keyDownAction } from ".\\keyaction.js";
+import { keyUpAction } from ".\\keyaction.js";
+import { getCookieArray } from ".\\cookie.js";
+import { setCookie } from ".\\cookie.js";
+export var end;
+export var start;
 //distinguish the game
 klondike = false
 freecell = true
@@ -268,8 +1008,7 @@ function fill(arrayName, numberOfCards, columnNumber)
 	}
 }
 
-function assignMovableClass()
-{
+export function assignMovableClass() {
 	for(i = 1; i < 9; i++)
 	{
 		col = columnArray[i]
@@ -378,8 +1117,8 @@ function mouseUpAction()
 	}
 }
 
-function checkForFastestTime() //uses fastTimes array and timer to check if the user got a fast time
-{
+export function //uses fastTimes array and timer to check if the user got a fast time
+checkForFastestTime() {
 	stopTimer()
 	//use mins and secs
 	index = -1
@@ -435,8 +1174,8 @@ function checkForFastestTime() //uses fastTimes array and timer to check if the 
 	}
 }
 
-function setPrefs()//set user preferences
-{
+export function //set user preferences
+setPrefs() {
 	prefString = "face=" + document.getElementById('chooseDeck').value
 	prefString += "&auto=" + document.getElementById('moveToAce').checked
 	prefString += "&animate=" + document.getElementById('animOption').checked
@@ -445,8 +1184,7 @@ function setPrefs()//set user preferences
 	setCookie("fpref", prefString)
 }
 
-function pause()
-{
+export function pause() {
 	clearTimeout(timer)
 	timer = 0
 
@@ -473,8 +1211,7 @@ function pause()
 	paused = true
 }
 
-function unPause()
-{
+export function unPause() {
 	now = new Date()
 	startTime = now.getTime() - eTime
 
@@ -487,6 +1224,7 @@ function unPause()
 	document.getElementById('pauseButton').className = 'activeLink'
 	paused = false
 }
+
 var attributes = document.getElementsByTagName('body');
 for(var i = 0; i < attributes.length; i++) {
 attributes[i].onload = function() {

@@ -1,10 +1,103 @@
+var i;
+var tempArray;
+var ani;
+var leftPos;
+export var newColumn;
+var end;
+var prevColumn;
+var moveable;
+export var indexOf;
+
+export function movefunctions_modificationFunc_18() {
+    indexOf = findIndex(idNum, col0);
+}
+
+var dblClickElement;
+export var attached;
+
+export function movefunctions_modificationFunc_28() {
+    attached = document.getElementById(idNum);
+}
+
+export function movefunctions_modificationFunc_17() {
+    attached = document.getElementById(idNum);
+}
+
+export var idNum;
+
+export function movefunctions_modificationFunc_27() {
+    idNum = moveArray[i];
+}
+
+export function movefunctions_modificationFunc_20() {
+    idNum = col0[i];
+}
+
+export function movefunctions_modificationFunc_19() {
+    idNum = col0[i];
+}
+
+export function movefunctions_modificationFunc_16() {
+    idNum = moveArray[i];
+}
+
+var i;
+var moveArray;
+export var yCardCenter;
+var xCardCenter;
+var newyPos;
+var newxPos;
+var y;
+var x;
+export var originalCardTopPos;
+export var originalCardLeftPos;
+var column;
+var cardNum;
+var activeCard;
+var dragapproved;
+var mouseIsDown;
+import { acceptDblClick } from ".\\freecell.js";
+import { leftPosArray } from ".\\freecell.js";
+import { columnArray } from ".\\freecell.js";
+import { ace4 } from ".\\freecell.js";
+import { ace3 } from ".\\freecell.js";
+import { ace2 } from ".\\freecell.js";
+import { ace1 } from ".\\freecell.js";
+import { col0 } from ".\\freecell.js";
+import { overlap } from ".\\freecell.js";
+import { cardHeight } from ".\\freecell.js";
+import { cardWidth } from ".\\freecell.js";
+import { freecell_modificationFunc_59 } from ".\\freecell.js";
+import { freecell_modificationFunc_58 } from ".\\freecell.js";
+import { freecell_modificationFunc_57 } from ".\\freecell.js";
+import { freecell_modificationFunc_37 } from ".\\freecell.js";
+import { freecell_modificationFunc_36 } from ".\\freecell.js";
+import { freecell_modificationFunc_35 } from ".\\freecell.js";
+import { freecell_modificationFunc_23 } from ".\\freecell.js";
+import { zPos } from ".\\freecell.js";
+import { freecell } from ".\\freecell.js";
+import { klondike } from ".\\freecell.js";
+import { validateCard } from ".\\validatecard.js";
+import { findIndex } from ".\\sub.js";
+import { findColumn } from ".\\sub.js";
+import { returnToOriginalPile } from ".\\sub.js";
+import { snapToPlace } from ".\\snaptoplace.js";
+import { assignMovableClass } from ".\\freecell.js";
+export var ani;
+export var moveArray;
+export var xCardCenter;
+export var newyPos;
+export var newxPos;
+export var column;
+export var dragapproved;
+export var mouseIsDown;
+
 // <!-- Filename: movefunctions.js -->
 // <!-- Created December 2, 2003 by Leah Culver -->
 // <!-- Last modified 12/17/2003 by Leah Culver -->
 
 //onmouse down function
-function drag()
-{
+export function drag() {
 	mouseIsDown = true
 	if(dragapproved == true)
 	{
@@ -62,8 +155,7 @@ function move()
 	}
 }
 
-function dblclickAction()
-{
+export function dblclickAction() {
 	if(event.srcElement.className=="drag" && acceptDblClick == true)
 	{
 		dblClickElement = event.srcElement.id
@@ -88,14 +180,13 @@ function createMovingArray(cardNum, column, willAnimate)
 		for(i = 0; i < moveArray.length; i++)
 		{
 			document.getElementById(moveArray[i]).style.zIndex = zPos // becomes the top layer
-			zPos++
+			freecell_modificationFunc_23();
 		}
 	}
 	return moveArray
 }
 
-function findPossibleMoves(cardNum, moveMeThere)
-{
+export function findPossibleMoves(cardNum, moveMeThere) {
 	moveable = false
 	prevColumn = findColumn(cardNum)
 	

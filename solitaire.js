@@ -1,4 +1,197 @@
 
+var prefString;
+var inputN;
+var winHeight;
+var winWidth;
+var pb;
+var dis;
+var v;
+var playerName;
+var cn;
+var sf;
+var f;
+var pileCard;
+var buriedCard;
+var buriedNum;
+var buriedCardIndex;
+var prevFlippedCard;
+var n;
+var flipMe;
+var idNum;
+var count;
+var leftAlign;
+var pos;
+var numToFlip;
+var flipIndex;
+var flipArray;
+var k;
+var en;
+var st;
+var moved;
+var moveId;
+var splPref5;
+var splPref4;
+var splPref3;
+var splPref2;
+var flipStyle;
+var splPref;
+var deckStyle;
+var prefArray;
+var temp;
+var leftOfCardLocation;
+var topOfCardLocation;
+var sclass;
+var image;
+var q;
+var num;
+var rand;
+var used;
+var index;
+var leftPosArray;
+var columnArray;
+var ace4Suit;
+var ace4;
+var ace3Suit;
+var ace3;
+var ace2Suit;
+var ace2;
+var ace1Suit;
+var ace1;
+var col0;
+var col7;
+var col6;
+var col5;
+var col4;
+var col3;
+var col2;
+var col1;
+var preloadCount;
+var preloadImageArray;
+var numCardsInDeck;
+var deck;
+var leftEdge;
+var staticImageArray;
+var col7Left;
+var col6Left;
+var col5Left;
+var col4Left;
+var col3Left;
+var col2Left;
+var col1Left;
+var tableTop;
+var pileUpLeft;
+var pileDownLeft;
+var cellTop;
+var overlap;
+var gutter;
+var border;
+var flipSpace;
+var cardHeight;
+var cardWidth;
+var cardFolder;
+var undoArray;
+var mouseIsDown;
+var acceptDblClick;
+var numMoves;
+var score;
+var zPos;
+var dragapproved;
+var s;
+var records;
+var players;
+var highScoresArray;
+var numHighScores;
+var freecell;
+var klondike;
+import { left } from ".\\snaptoplace.js";
+import { moveArray } from ".\\movefunctions.js";
+import { yCardCenter } from ".\\movefunctions.js";
+import { xCardCenter } from ".\\movefunctions.js";
+import { newyPos } from ".\\movefunctions.js";
+import { newxPos } from ".\\movefunctions.js";
+import { column } from ".\\movefunctions.js";
+import { validateCard } from ".\\validatecard.js";
+import { changeDeck } from ".\\sub.js";
+import { findIndex } from ".\\sub.js";
+import { returnToOriginalPile } from ".\\sub.js";
+import { undo } from ".\\snaptoplace.js";
+import { snapToPlace } from ".\\snaptoplace.js";
+import { dblclickAction } from ".\\movefunctions.js";
+import { drag } from ".\\movefunctions.js";
+import { keyDownAction } from ".\\keyaction.js";
+import { keyUpAction } from ".\\keyaction.js";
+import { getCookieArray } from ".\\cookie.js";
+import { setCookie } from ".\\cookie.js";
+export var numToFlip;
+export var flipIndex;
+export var pileUpLeft;
+export var pileDownLeft;
+export var flipSpace;
+export var prefString;
+export var inputN;
+export var winHeight;
+export var winWidth;
+export var pb;
+export var dis;
+var v;
+export var moved;
+export var moveId;
+export var splPref4;
+export var splPref3;
+export var splPref2;
+export var splPref;
+export var deckStyle;
+export var prefArray;
+export var leftOfCardLocation;
+export var topOfCardLocation;
+export var rand;
+export var used;
+var index;
+export var leftPosArray;
+export var columnArray;
+export var ace4Suit;
+export var ace4;
+export var ace3Suit;
+export var ace3;
+export var ace2Suit;
+export var ace2;
+export var ace1Suit;
+export var ace1;
+export var col0;
+export var col7;
+export var col6;
+export var col5;
+export var col4;
+export var col3;
+export var col2;
+export var col1;
+export var numCardsInDeck;
+export var deck;
+export var leftEdge;
+export var staticImageArray;
+export var col7Left;
+export var col6Left;
+export var col5Left;
+export var col4Left;
+export var col3Left;
+export var col2Left;
+export var col1Left;
+export var tableTop;
+export var cellTop;
+export var overlap;
+export var gutter;
+export var border;
+export var cardHeight;
+export var cardWidth;
+export var cardFolder;
+export var undoArray;
+export var numMoves;
+export var score;
+export var zPos;
+export var records;
+export var players;
+export var freecell;
+export var klondike;
 //distinguish the game
 klondike = true
 freecell = false
@@ -393,8 +586,7 @@ function mouseUpAction()
 	}
 }
 
-function addToScore(numAdd)
-{
+export function addToScore(numAdd) {
 	score = score + numAdd
 	sf = document.getElementById('scoreField')
 	//score can never be less than -100 because I'm just so nice.
@@ -418,8 +610,8 @@ function changeNumDealt()
 		document.getElementById('dealtspan').style.visibility = "visible"
 }
 
-function checkForHighScore() //uses highScores array and score variable to check if the user got a high score
-{
+export function //uses highScores array and score variable to check if the user got a high score
+checkForHighScore() {
 	if(score > 0)
 	{
 		index = -1

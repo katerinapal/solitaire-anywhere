@@ -1,6 +1,6 @@
-<!-- Filename: cookie.js -->
-<!-- Created November 17, 2003 by Leah Culver -->
-<!-- Last modified 11/17/2003 by Leah Culver -->
+// <!-- Filename: cookie.js -->
+// <!-- Created November 17, 2003 by Leah Culver -->
+// <!-- Last modified 11/17/2003 by Leah Culver -->
 
 //set a cookie using the cookie name and value
 //results in a cookie that looks like: cookieName:name=value

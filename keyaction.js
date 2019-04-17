@@ -1,6 +1,6 @@
-<!-- Filename: keyaction.js -->
-<!-- Created December 2, 2003 by Leah Culver -->
-<!-- Last modified 12/15/2003 by Leah Culver -->
+// <!-- Filename: keyaction.js -->
+// <!-- Created December 2, 2003 by Leah Culver -->
+// <!-- Last modified 12/15/2003 by Leah Culver -->
 
 //handles the onkeyup
 function keyUpAction()

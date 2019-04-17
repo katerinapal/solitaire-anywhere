@@ -1,6 +1,6 @@
-<!-- Filename: sub.js -->
-<!-- Created December 2, 2003 by Leah Culver -->
-<!-- Last modified 12/5/2003 by Leah Culver -->
+// <!-- Filename: sub.js -->
+// <!-- Created December 2, 2003 by Leah Culver -->
+// <!-- Last modified 12/5/2003 by Leah Culver -->
 
 function returnToOriginalPile()
 {

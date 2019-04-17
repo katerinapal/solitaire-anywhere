@@ -1,6 +1,6 @@
-<!-- Filename: snaptoplace.js -->
-<!-- Created December 2, 2003 by Leah Culver -->
-<!-- Last modified 12/15/2003 by Leah Culver -->
+// <!-- Filename: snaptoplace.js -->
+// <!-- Created December 2, 2003 by Leah Culver -->
+// <!-- Last modified 12/15/2003 by Leah Culver -->
 
 function snapToPlace(moveArray, oldColumn, newColumn, newColumnLeft, undo, animateMe)//Automatically position the card
 {

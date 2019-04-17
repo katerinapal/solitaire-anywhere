@@ -1,6 +1,6 @@
-<!-- Filename: validatecard.js -->
-<!-- Created December 2, 2003 by Leah Culver -->
-<!-- Last modified 12/3/2003 by Leah Culver -->
+// <!-- Filename: validatecard.js -->
+// <!-- Created December 2, 2003 by Leah Culver -->
+// <!-- Last modified 12/3/2003 by Leah Culver -->
 
 //Is this a valid move?
 function validateCard(moveId, oldColumn, newColumn)

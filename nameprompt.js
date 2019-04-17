@@ -1,6 +1,6 @@
-<!-- Filename: cookie.js -->
-<!-- Created December 3, 2003 by Leah Culver -->
-<!-- Last modified 12/18/2003 by Leah Culver -->
+// <!-- Filename: cookie.js -->
+// <!-- Created December 3, 2003 by Leah Culver -->
+// <!-- Last modified 12/18/2003 by Leah Culver -->
 
 //This div is supposed to look like a prompt box
 //to prompt a user for their name after they have

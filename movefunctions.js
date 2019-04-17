@@ -1,6 +1,6 @@
-<!-- Filename: movefunctions.js -->
-<!-- Created December 2, 2003 by Leah Culver -->
-<!-- Last modified 12/17/2003 by Leah Culver -->
+// <!-- Filename: movefunctions.js -->
+// <!-- Created December 2, 2003 by Leah Culver -->
+// <!-- Last modified 12/17/2003 by Leah Culver -->
 
 //onmouse down function
 function drag()
